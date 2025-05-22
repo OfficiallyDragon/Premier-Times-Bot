@@ -23,5 +23,9 @@
   "homepage": "https://github.com/OfficiallyDragon/Premier-Times-Bot#readme",
   "dependencies": {
     "discord.js": "^14.19.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "eslint": "^9.27.0"
   }
 }
