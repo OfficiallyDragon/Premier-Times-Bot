@@ -1,0 +1,27 @@
+{
+  "name": "premier-times-bot",
+  "version": "1.0.0",
+  "description": "A bot to announce premier times for VALORANT.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OfficiallyDragon/Premier-Times-Bot.git"
+  },
+  "keywords": [
+    "VALORANT",
+    "Premier",
+    "Times"
+  ],
+  "author": "OfficiallyDragon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OfficiallyDragon/Premier-Times-Bot/issues"
+  },
+  "homepage": "https://github.com/OfficiallyDragon/Premier-Times-Bot#readme",
+  "dependencies": {
+    "discord.js": "^14.19.3"
+  }
+}
