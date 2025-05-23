@@ -1,5 +1,7 @@
 /* eslint-disable brace-style */
 const { SlashCommandBuilder, MessageFlags, EmbedBuilder } = require('discord.js');
+const config = require('../../config.json');
+const mapImages = config.mapImages;
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -39,20 +41,6 @@ module.exports = {
 				),
 		),
 	async execute(interaction) {
-
-		const mapImages = {
-			'Ascent': 'https://static.wikia.nocookie.net/valorant/images/e/e7/Loading_Screen_Ascent.png',
-			'Haven': 'https://static.wikia.nocookie.net/valorant/images/7/70/Loading_Screen_Haven.png',
-			'Split': 'https://static.wikia.nocookie.net/valorant/images/d/d6/Loading_Screen_Split.png',
-			'Icebox': 'https://static.wikia.nocookie.net/valorant/images/1/13/Loading_Screen_Icebox.png',
-			'Sunset': 'https://static.wikia.nocookie.net/valorant/images/5/5c/Loading_Screen_Sunset.png',
-			'Pearl': 'https://static.wikia.nocookie.net/valorant/images/a/af/Loading_Screen_Pearl.png',
-			'Lotus': 'https://static.wikia.nocookie.net/valorant/images/d/d0/Loading_Screen_Lotus.png',
-			'Fracture': 'https://static.wikia.nocookie.net/valorant/images/f/fc/Loading_Screen_Fracture.png',
-			'Abyss': 'https://static.wikia.nocookie.net/valorant/images/6/61/Loading_Screen_Abyss.png',
-			'Bind': 'https://static.wikia.nocookie.net/valorant/images/2/23/Loading_Screen_Bind.png',
-			'Breeze': 'https://static.wikia.nocookie.net/valorant/images/1/10/Loading_Screen_Breeze.png',
-		};
 
 		const winEmbed = new EmbedBuilder()
 			.setColor('#5ef281')
