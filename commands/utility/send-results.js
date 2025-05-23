@@ -45,10 +45,10 @@ module.exports = {
 		const winEmbed = new EmbedBuilder()
 			.setColor('#5ef281')
 			.setTitle('We won a premier match!')
-			.setDescription(`And now have **${interaction.options.getString('current-points')}/600** points to qualify for playoffs
-            Score: ${interaction.options.getString('score')}
+			.setDescription(`And now have **${interaction.options.getString('current-points')}/600** points
+			Score: ${interaction.options.getString('score')}
 
-            On the map **${interaction.options.getString('map')}**`);
+			On the map **${interaction.options.getString('map')}**`);
 
 		const loseEmbed = new EmbedBuilder()
 			.setColor('#c53425')
