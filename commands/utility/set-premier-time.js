@@ -16,6 +16,7 @@ module.exports = {
 		const replyEmbed = new EmbedBuilder()
 			.setColor('#f19f22')
 			.setTitle('Are you able to make todays premier?')
+
 			.setFooter({ text: 'React below to answer ⬇️' })
 			.setImage(attachment.url);
 
