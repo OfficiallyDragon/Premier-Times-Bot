@@ -13,9 +13,9 @@ module.exports = {
 				.setRequired(true),
 		)
 		.addStringOption(option =>
-			option.setName('score')
-				.setDescription('How much did you win/lose by?')
-				.setRequired(true),
+			option.setName('corrode')
+				.setDescription('Did you play Corrode?')
+				.setRequired(false),
 		)
 		.addStringOption(option =>
 			option.setName('current-points')
@@ -27,18 +27,24 @@ module.exports = {
 				.setDescription('What map did you play?')
 				.setRequired(true)
 				.addChoices(
-					{ name: 'Ascent', value: 'Ascent' },
-					{ name: 'Haven', value: 'Haven' },
-					{ name: 'Split', value: 'Split' },
-					{ name: 'Icebox', value: 'Icebox' },
-					{ name: 'Sunset', value: 'Sunset' },
-					{ name: 'Pearl', value: 'Pearl' },
-					{ name: 'Lotus', value: 'Lotus' },
-					{ name: 'Fracture', value: 'Fracture' },
 					{ name: 'Abyss', value: 'Abyss' },
+					{ name: 'Ascent', value: 'Ascent' },
 					{ name: 'Bind', value: 'Bind' },
 					{ name: 'Breeze', value: 'Breeze' },
+					{ name: 'Corrode', value: 'Corrode' },
+					{ name: 'Fracture', value: 'Fracture' },
+					{ name: 'Haven', value: 'Haven' },
+					{ name: 'Icebox', value: 'Icebox' },
+					{ name: 'Lotus', value: 'Lotus' },
+					{ name: 'Pearl', value: 'Pearl' },
+					{ name: 'Split', value: 'Split' },
+					{ name: 'Sunset', value: 'Sunset' },
 				),
+		)
+		.addStringOption(option =>
+			option.setName('score')
+				.setDescription('How much did you win/lose by?')
+				.setRequired(true),
 		),
 	async execute(interaction) {
 
@@ -47,18 +53,18 @@ module.exports = {
 			.setTitle('We won a premier match!')
 			.setDescription(`And now have **${interaction.options.getString('current-points')}/600** points to qualify for playoffs
 			
-            Score: ${interaction.options.getString('score')}
+			Score: ${interaction.options.getString('score')}
 
-            On the map **${interaction.options.getString('map')}**`);
+			On the map **${interaction.options.getString('map')}**`);
 
 		const loseEmbed = new EmbedBuilder()
 			.setColor('#c53425')
 			.setTitle('We lost a premier match :(')
 			.setDescription(`And now have **${interaction.options.getString('current-points')}/600** points to qualify for playoffs
 
-            Score: ${interaction.options.getString('score')}
-            
-            On the map **${interaction.options.getString('map')}**`);
+			Score: ${interaction.options.getString('score')}
+			
+			On the map **${interaction.options.getString('map')}**`);
 
 		const selectedMap = interaction.options.getString('map');
 		const mapImage = mapImages[selectedMap];
